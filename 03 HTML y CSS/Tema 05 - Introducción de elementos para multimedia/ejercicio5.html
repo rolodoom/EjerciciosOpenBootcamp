@@ -1,0 +1,59 @@
+<!--
+
+ _______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+ _         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 05 - Introducción de elementos para multimedia
+| |_____  | |___| |    Ejercicio 5 - Fichero HTML
+|_______| |_______|
+
+
+Deberéis crear una galería de imágenes, 
+esta galería estará en un contenedor con el borde sólido, 
+en la galería podrás seleccionar la imagen que quieras 
+visualizar entre cuatro, para seleccionar 
+qué imagen ver se hará mediante un input de type radio.
+
+--><!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 5 - Galería</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="ejercicio5.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Galeria - Ejercicio 5</h1>
+		</header>
+
+		<main class="galeria">
+			<input type="radio" name="nav" id="_1" checked />
+			<input type="radio" name="nav" id="_2" />
+			<input type="radio" name="nav" id="_3" />
+			<input type="radio" name="nav" id="_4" />
+
+			<img src="https://picsum.photos/id/1/600/400" alt="Img 1" />
+			<img src="https://picsum.photos/id/10/600/400" alt="Img 2" />
+			<img src="https://picsum.photos/id/1001/600/400" alt="Img 3" />
+			<img src="https://picsum.photos/id/1003/600/400" alt="Img 4" />
+		</main>
+		<footer>
+			<p>
+				<strong>NOTA:</strong> Imagenes servidas desde
+				<a href="https://picsum.photos/">Lorem Picusm</a>
+			</p>
+		</footer>
+	</body>
+</html>
