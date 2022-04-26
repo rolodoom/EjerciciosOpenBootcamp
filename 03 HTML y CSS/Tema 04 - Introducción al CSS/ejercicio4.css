@@ -1,0 +1,23 @@
+* {
+	font-family: "Roboto Serif", serif;
+	color: gray;
+}
+
+header {
+	padding: 3rem 1rem;
+}
+header h1 {
+	text-align: center;
+	color: #555;
+}
+
+main article {
+	font-size: 1.25rem;
+}
+
+main article p.miparrafo {
+	font-size: 1rem;
+	font-style: italic;
+	padding: 1rem 1rem 1rem 5rem;
+	color: lightcoral;
+}
