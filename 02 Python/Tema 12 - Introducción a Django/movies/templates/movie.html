@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{movie}} - {{movie.director}}{% endblock %}
+
+{% block header-title %}{{movie}} <span>{{movie.year}} - {{movie.duration_hours}}</span>{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div class="movie-poster">
+			<img src="{{ movie.poster }}" alt="{{ movie }}" class="img-thumbnail"><br>
+		</div>
+	</div>
+	<div class="col-md-9">
+
+
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Home</a></li>
+				<li class="breadcrumb-item"><a href="/{{movie.director.id}}">{{movie.director}}</a></li>
+				<li class="breadcrumb-item active" aria-current="page">{{movie}}</li>
+			</ol>
+		</nav>
+		
+		<p class="lead">{{movie.plot}}</p>
+		<table class="table">
+			<tr>
+				<td><strong>Director:</strong> <a href="/{{movie.director.id}}">{{movie.director}}</a></td>
+			</tr>
+			<tr>
+				<td><strong>Year:</strong> {{movie.year}}</td>
+			</tr>
+			<tr>
+				<td><strong>Duration:</strong> {{movie.duration_hours}}</td>
+			</tr>
+			<tr>
+				<td><strong>Language:</strong> {{ movie.language.all|join:", " }}</td>
+			</tr>
+			<tr>
+				<td><strong>Genre:</strong> {{ movie.genre.all|join:", " }}</td>
+			</tr>
+			<tr>
+				<td><strong>IMDB:</strong> <a href="{{movie.imdb}}" target="_blank">{{movie.imdb}}</a></td>
+			</tr>
+		</table>
+
+	</div>
+		
+	
+</div>
+
+{% endblock %}

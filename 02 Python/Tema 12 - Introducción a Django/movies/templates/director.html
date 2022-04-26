@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{director}}{% if director.date_of_death %}&dagger;{% endif %}{% endblock %}
+
+{% block header-title %}{{director}}{% if director.date_of_death %}<sup>&dagger;</sup> {% endif %}{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="director-picture">
+			<img src="{{ director.picture }}" alt="{{ director }}"><br>
+		</div>
+		<div class="meta py-2">
+			<ul class="list-unstyled">
+				<li><strong>Birth:</strong> {{director.date_of_birth}}</li>
+				{% if director.date_of_death %}
+				<li><strong>Died:</strong> {{director.date_of_death}} &dagger;</li>
+				{% endif %}
+			</ul>
+			
+		</div>
+	</div>
+	<div class="col-md-9">
+
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">{{director}}</li>
+			</ol>
+		</nav>
+
+		<h2 class="pb-3">Biography</h2>
+		
+		{{director.biography | linebreaks}}
+	</div>
+</div>
+
+<div class="py-3">
+
+</div>
+<div class="row">
+	<h2 class="pb-5 text-center">Películas</h2>
+	{% for movie in director.movie_set.all %}
+	<div class="col-md-4 col-lg-3 text-center">
+		<a href="/movie/{{movie.id}}">
+			<div class="movie-poster pb-5">
+				<img src="{{ movie.poster }}" alt="{{ movie }}" class="img-fluid img-thumbnail"><br>
+				<span>{{movie}}</span>
+			</div>
+			
+		</a>
+	</div>
+	{% empty %}
+		<div class="col-md-12">No hay peliculas aún</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+main{
+    min-height: 520px;
+}
+.director-name{
+    font-size: 1rem;
+}
+
+.movie-poster img,
+.director-picture img
+{
+    /* max-height: 300px; */
+    height: 326px;
+}
+
+footer{
+    min-height: 150px;
+}
+
+header span{
+    font-size: 1rem;
+    display: block;
+}
