@@ -1,0 +1,62 @@
+/*
+ _______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+ _         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 06 - Anidación de Selectores
+| |_____  | |___| |    Ejercicio 6 - Fichero CSS
+|_______| |_______|
+
+*/
+
+* {
+	font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	background-color: #efefef;
+	margin-bottom: 5em;
+}
+
+header {
+	text-align: center;
+	padding: 2em;
+}
+
+main {
+	box-sizing: border-box;
+	border-radius: 3em;
+	background-color: white;
+	padding: 4em;
+	border: 1px solid #dfdfdf;
+	box-shadow: 0 0 1em #dfdfdf;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+main article h2 {
+	color: #777;
+	margin-bottom: 2em;
+}
+
+main article p {
+	color: lightcoral;
+	margin-bottom: 3em;
+}
+
+main article .miparrafo {
+	color: lightslategray;
+}
+
+main article div .miparrafo {
+	color: lightseagreen;
+	margin-bottom: 0em;
+}
