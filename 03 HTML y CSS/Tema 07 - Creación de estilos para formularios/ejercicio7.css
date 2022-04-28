@@ -1,0 +1,104 @@
+/*
+ _______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+ _         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 07 - Creación de estilos para formularios
+| |_____  | |___| |    Ejercicio 7 - Fichero CSS
+|_______| |_______|
+
+*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-size: 0.875em;
+}
+
+body {
+	background-image: url(https://picsum.photos/id/10/1920/1080.webp);
+	background-size: cover;
+	background-position: center center;
+	font-family: "Roboto", sans-serif;
+	color: #353737;
+}
+
+h1 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	text-align: center;
+}
+
+.contenedor {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-form {
+	background-color: rgba(255, 255, 255, 0.75);
+	max-width: 400px;
+	padding: 3em;
+	border-radius: 1em;
+	margin: 2em;
+}
+
+.login-form__field {
+	margin-bottom: 1em;
+}
+
+.login-form__field--usuario,
+.login-form__field--password {
+	width: 240px;
+	max-width: 100%;
+	border: 1px solid #aaa;
+	border-radius: 0.5em;
+	font-size: 1.15em;
+	padding: 0.5em;
+}
+
+.login-form__field--checkbox {
+	height: 1.5em;
+	width: 1.5em;
+}
+.login-form__field--usuario,
+.login-form__field--password {
+	background: transparent;
+	background-repeat: no-repeat;
+	background-position: 0.15em;
+	padding-left: 2.25em;
+}
+.login-form__field--usuario {
+	background-image: url(icons/outline_account_circle_black_24dp.svg);
+}
+.login-form__field--password {
+	background-image: url(icons/outline_vpn_key_black_24dp.svg);
+}
+
+.login-form__field [for="check"] {
+	font-size: 1em;
+	position: relative;
+	top: -0.3em;
+	margin-left: 0.5em;
+}
+
+.login-form__button button {
+	background-color: #1f90a8;
+	border: 0;
+	padding: 0.4em 1.5em;
+	margin-top: 1.25em;
+	font-size: 1.25em;
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+	cursor: pointer;
+}
+.login-form__button button:hover {
+	background-color: #718072;
+}

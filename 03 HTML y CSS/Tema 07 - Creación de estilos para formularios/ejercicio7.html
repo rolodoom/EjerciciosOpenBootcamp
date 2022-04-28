@@ -1,0 +1,88 @@
+<!--
+
+ _______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+ _         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 07 - Creación de estilos para formularios
+| |_____  | |___| |    Ejercicio 7 - Fichero HTML
+|_______| |_______|
+
+
+En este ejercicio deberéis crear una página con un
+formulario de inicio de sesión, está pagina tendrá:
+
+* Una imagen de fondo.
+* Un formulario de inicio de sesión,
+	- contendrá mail y contraseña,
+	- un recuadro seleccionable de "Acepto términos y condiciones"
+	- y un botón de enviar.
+* Validación de campos.
+
+--><!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prueba Formulario</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="ejercicio7.css" />
+	</head>
+	<body>
+		<div class="contenedor">
+			<div class="login-form">
+				<form action="recibir-formulario.html" method="post">
+					<h1>Login</h1>
+					<div class="login-form__field">
+						<input
+							type="text"
+							name="usuario"
+							id="usuario"
+							class="login-form__field--usuario"
+							placeholder="Usuario"
+							required
+						/>
+					</div>
+					<div class="login-form__field">
+						<input
+							type="password"
+							name="password"
+							id="password"
+							class="login-form__field--password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							title="Debe contener por lo menos un número, una letra mayúscula, una letra minúscula y al menos 8 o más caractéres"
+							required
+						/>
+					</div>
+					<div class="login-form__field">
+						<input
+							type="checkbox"
+							name="check"
+							id="check"
+							class="login-form__field--checkbox"
+							required
+						/>
+						<label for="check"
+							>He leído y acepto la política de privacidad</label
+						>
+					</div>
+
+					<div class="login-form__button">
+						<button type="submit" class="login-form__button--button">
+							Enviar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
