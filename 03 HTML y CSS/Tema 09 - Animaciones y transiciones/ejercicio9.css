@@ -1,0 +1,119 @@
+/* 
+
+_______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+_         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 09 - Animaciones y transiciones
+| |_____  | |___| |    Ejercicio 9 - Fichero CSS
+|_______| |_______|
+
+
+En este ejercicio nos vamos a centrar en animaciones, 
+deberás crear unas figuras cuadradas a las cuales 
+aplicarle las siguientes animaciones:
+
+* Cuando el ratón esté encima, comienza una animación 
+que le haga rotar sobre si misma 360º.
+* Cuando el ratón esté encima, se desplazará hacia 
+la derecha mientras desaparece (fade).
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+	padding: 4em 0.5em;
+}
+h1,
+h2 {
+	color: lightgray;
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 2em;
+}
+
+body {
+	background-image: url(https://picsum.photos/id/114/1920/1080.webp);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+main {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+article {
+	margin-bottom: 2em;
+	min-width: 220px;
+}
+
+/* Rotate */
+
+.rotate {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+}
+.rotate svg {
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+}
+.rotate:hover {
+	transform: rotate(-360deg);
+	transition: transform 1s;
+}
+.rotate:hover svg {
+	fill: white;
+}
+
+/*with ANIMATION*/
+.right-fade {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+.right-fade svg {
+	width: 100%;
+	height: 100%;
+}
+
+.right-fade:hover {
+	animation-name: right-fade;
+	animation-duration: 1s;
+	animation-timing-function: ease-in cubic-bezier(0.6, 0.02, 0.94, 0.66);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes right-fade {
+	0% {
+		transform: translateX(0px);
+	}
+	30% {
+		transform: translateX(-50px);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(400px);
+	}
+}
