@@ -1,0 +1,57 @@
+<!--
+
+_______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+_         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 10 - Introducción al diseño resposnive
+| |_____  | |___| |    Ejercicio 10 - Fichero HTML
+|_______| |_______|
+
+
+Para practicar el diseño responsive, en este ejercicio 
+deberás aplicar lo aprendido para conseguir lo siguiente:
+
+* Un cuadrado de color rojo con unas dimensiones a tu gusto 
+(hazlo grande) que cuando esté en una pantalla más pequeña 
+deberá cambiar el color a verde.
+* Un contenedor con un vídeo, el cual si se reduce la 
+resolución a una más baja cambia a una imagen.
+
+--><!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 10 - Introducción al diseñor responsive</title>
+		<link rel="stylesheet" href="ejercicio10.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Ejercicio 10</h1>
+		</header>
+
+		<main>
+			<article>
+				<h2>Cuadrado</h2>
+				<div class="square"></div>
+			</article>
+			<article>
+				<h2>Video</h2>
+				<video
+					src="dog.mp4"
+					preload="auto"
+					poster="dog.webp"
+					autoplay
+					muted
+					loop
+				></video>
+				<img src="dog.webp" alt="A dog" />
+			</article>
+		</main>
+	</body>
+</html>

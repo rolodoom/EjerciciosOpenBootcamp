@@ -1,0 +1,104 @@
+/* 
+
+_______   _______
+|  _____| |  ___  |
+| |       | |   | |    Rolando Ramos Torres (@rolodoom)
+| |       | |___| |    https://github.com/rolodoom
+|_|       |_______|
+_         _______  
+| |       |  ___  |    Curso: HTML y CSS
+| |       | |   | |    Sesion 10 - Introducción al diseño resposnive
+| |_____  | |___| |    Ejercicio 10 - Fichero CSS
+|_______| |_______|
+
+
+Para practicar el diseño responsive, en este ejercicio 
+deberás aplicar lo aprendido para conseguir lo siguiente:
+
+* Un cuadrado de color rojo con unas dimensiones a tu gusto 
+(hazlo grande) que cuando esté en una pantalla más pequeña 
+deberá cambiar el color a verde.
+* Un contenedor con un vídeo, el cual si se reduce la 
+resolución a una más baja cambia a una imagen.
+
+*/
+:root {
+	--color-fondo: #222;
+	--color-texto: #fff;
+	--color-primario: #aa855b;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	color: var(--color-texto);
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 10px;
+	background-color: var(--color-fondo);
+}
+
+header {
+	padding: 3rem 1em;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	color: var(--color-primario);
+}
+h2 {
+	font-size: 1.75rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+main {
+	box-sizing: border-box;
+	padding: 2rem;
+}
+
+article {
+	margin-bottom: 3rem;
+	min-width: 220px;
+}
+
+article video {
+	display: none;
+	visibility: hidden;
+	width: 100%;
+}
+article img {
+	width: 100%;
+}
+
+.square {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	background-color: lightgreen;
+}
+.square:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	article video {
+		display: block;
+		visibility: visible;
+	}
+	article img {
+		display: none;
+		visibility: hidden;
+	}
+
+	.square {
+		background-color: var(--color-primario);
+	}
+}
