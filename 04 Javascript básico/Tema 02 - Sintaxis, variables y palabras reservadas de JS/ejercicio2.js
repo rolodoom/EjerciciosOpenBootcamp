@@ -18,10 +18,6 @@ Crea un nuevo archivo JS que contenga una lista con los siguientes elementos:
 - Tu fecha de nacimiento (Date)
 - Tu libro favorito (Objeto con propiedades: titulo, autor, fecha, url)
 
-Por último, fuera de la función tendrás que realizar 
-la llamada a la función y mostrarás por consola la 
-primera variable que has creado.
-
 */
 "use strict";
 
@@ -38,8 +34,4 @@ const lista = [
 	},
 ];
 
-function mifuncion() {
-	console.log(lista);
-}
-
-mifuncion();
+console.log(lista);
