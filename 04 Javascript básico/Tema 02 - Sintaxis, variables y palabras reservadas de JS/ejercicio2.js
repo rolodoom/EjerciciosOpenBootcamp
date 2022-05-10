@@ -10,14 +10,13 @@
 | |_____  | |___| |               palabras reservadas JS
 |_______| |_______|    Ejercicio 2
 
-En este ejercicio tienes que crear un archivo JavaScript 
-donde crees una variable la cual contenga una cadena 
-de texto.
+Crea un nuevo archivo JS que contenga una lista con los siguientes elementos:
 
-Después crearás una función, dentro de ella crearas una 
-variable que se llame igual que la primera que has creado 
-y le asignaras una cadena de texto diferente a la primera 
-y mostrarás la variable por consola.
+- Tu nombre (string)
+- Tu edad (number)
+- ¿Eres desarrollador? (boolean)
+- Tu fecha de nacimiento (Date)
+- Tu libro favorito (Objeto con propiedades: titulo, autor, fecha, url)
 
 Por último, fuera de la función tendrás que realizar 
 la llamada a la función y mostrarás por consola la 
@@ -26,12 +25,21 @@ primera variable que has creado.
 */
 "use strict";
 
-let texto = "Primera cadena de texto";
+const lista = [
+	"Rolando",
+	43,
+	true,
+	new Date(1978, 10, 13),
+	{
+		titulo: "Africanus. El hijo del cónsul",
+		autor: "Santiago Posteguillo",
+		fecha: new Date(2015, 5, 1),
+		url: "https://www.amazon.es/dp/B00699MBS0/",
+	},
+];
 
 function mifuncion() {
-  let texto = "Segunda cadena de texto";
-  console.log(texto);
+	console.log(lista);
 }
 
 mifuncion();
-console.log(texto);
