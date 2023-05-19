@@ -1,64 +1,52 @@
-/*
- _______   _______
-|  _____| |  ___  |
-| |       | |   | |    Rolando Ramos Torres (@rolodoom)
-| |       | |___| |    https://github.com/rolodoom
-|_|       |_______|
- _         _______  
-| |       |  ___  |    Curso: HTML y CSS
-| |       | |   | |    Sesion 06 - Anidación de Selectores
-| |_____  | |___| |    Ejercicio 6 - Fichero CSS
-|_______| |_______|
-
-*/
-
 * {
   font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
   font-weight: 100;
   font-family: "Roboto", sans-serif;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
+  font-size: 1.6rem;
   color: #efefef;
   background-color: #333;
-  margin-bottom: 5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 header {
   text-align: center;
-  padding: 2rem;
 }
+button {
+  background-color: white;
+  padding: 1rem 2.4rem;
+  border: none;
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.gallery__item {
-  width: 300px;
-  box-sizing: border-box;
-  margin: 0;
-  transition: all 0.2s ease-in-out;
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.gallery__item:hover {
-  box-shadow: 0 0.5rem 1rem 0px rgba(0, 0, 0, 0.5);
-}
-
-.gallery__item:hover .gallery__image {
-  filter: grayscale(0);
-  transform: scale(1.25);
-}
-
-.gallery__image {
-  width: 100%;
-  height: auto;
+  text-transform: uppercase;
+  cursor: pointer;
   display: block;
-  filter: grayscale(0.75);
-  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  transition: all 0.2s ease-in-out;
+}
+
+button::before {
+  content: "Pasa por encima";
+  font-weight: 400;
+}
+button:hover {
+  color: white;
+  background-color: forestgreen;
+}
+button:hover::before {
+  content: "Hecho!";
 }
