@@ -1,95 +1,46 @@
-<!--
-
-_______   _______
-|  _____| |  ___  |
-| |       | |   | |    Rolando Ramos Torres (@rolodoom)
-| |       | |___| |    https://github.com/rolodoom
-|_|       |_______|
-_         _______  
-| |       |  ___  |    HTML y CSS
-| |       | |   | |    Sesion 03 - Multimedia
-| |_____  | |___| |    Ejercicio 3
-|_______| |_______|
-
-
-Para este ejercicio deberéis introducir una imagen y 
-darle además de un texto alternativo.
-
-Aparte, añadiréis un audio y un vídeo a vuestra elección, 
-deben tener algunos de los atributos vistos en las sesiones 
-u otros que os parezcan interesantes.
-
---><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ejercicio 3</title>
-	</head>
-	<body>
-		<header>
-			<h1>
-				<img src="icons/icon-dog.svg" alt="El Perro" />
-				Ejercicio 3 - El Perro
-			</h1>
-		</header>
-		<main>
-			<article>
-				<h2>
-					<img src="icons/icon-image.svg" alt="Imagen" />
-					Imagen
-				</h2>
-				<picture>
-					<source
-						media="(min-width:1200px)"
-						srcset="https://picsum.photos/id/237/900/600"
-					/>
-					<source
-						media="(min-width:768px)"
-						srcset="https://picsum.photos/id/237/600/400"
-					/>
-					<img
-						src="https://picsum.photos/id/237/300/200"
-						alt="Perro labrador negro"
-					/>
-				</picture>
-				<br />
-				<small
-					>Imagen cargada desde
-					<a href="https://picsum.photos/">Lorem Picsum</a></small
-				>
-			</article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <section>
+      <h1>Aprendiendo a utilizar imágenes</h1>
+      <picture>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg"
+          alt="God of war"
+        />
+      </picture>
+      <br />
+      <small>Imagen cargada desde wikimedia</small>
+    </section>
 
-			<article>
-				<h2>
-					<img src="icons/icon-videocam.svg" alt="Video" />
-					Video
-				</h2>
-				<iframe
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/A21GxQdrtME"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				></iframe>
-				<br />
-				<small>Video incrustado desde YouTube</small>
-			</article>
+    <section>
+      <h1>Aprendiendo a utilizar los vídeos</h1>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/A21GxQdrtME"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <small>Video incrustado desde YouTube</small>
+    </section>
 
-			<article>
-				<h2>
-					<img src="icons/icon-headphones.svg" alt="Audio" />
-					Audio
-				</h2>
-				<p>Labrador ladrando</p>
-				<audio controls>
-					<source src="audio/ejercicio3.ogg" />
-					<source src="audio/ejercicio3.mp3" />
-				</audio>
-			</article>
-		</main>
-	</body>
+    <section>
+      <h1>Aprendiendo a utilizar los audios</h1>
+      <p>Labrador ladrando</p>
+      <audio controls>
+        <source src="audio/ejercicio3.ogg" />
+        <source src="audio/ejercicio3.mp3" />
+      </audio>
+    </section>
+  </body>
 </html>
