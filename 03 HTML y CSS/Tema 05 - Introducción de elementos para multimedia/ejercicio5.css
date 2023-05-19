@@ -1,92 +1,50 @@
-/*
- _______   _______
-|  _____| |  ___  |
-| |       | |   | |    Rolando Ramos Torres (@rolodoom)
-| |       | |___| |    https://github.com/rolodoom
-|_|       |_______|
- _         _______  
-| |       |  ___  |    Curso: HTML y CSS
-| |       | |   | |    Sesion 05 - Introducción de elementos para multimedia
-| |_____  | |___| |    Ejercicio 5 - Fichero CSS
-|_______| |_______| 
-
-*/
-
 * {
-	margin: 0;
-	background-color: #efefef;
-	font-family: "Roboto", sans-serif;
-	font-weight: 100;
+  font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
 }
 
-a {
-	color: lightcoral;
-	transition: all 0.5s ease;
+body {
+  color: #efefef;
+  background-color: #333;
+  margin-bottom: 5em;
 }
-a:hover {
-	color: black;
-}
+
 header {
-	padding: 2rem 1rem;
-}
-header h1 {
-	text-align: center;
-	color: lightcoral;
+  text-align: center;
+  padding: 2rem;
 }
 
-header h1,
-a {
-	font-weight: 300;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.gallery__item {
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none;
+  overflow: hidden;
 }
 
-strong {
-	font-weight: 400;
+.gallery__item:hover {
+  box-shadow: 0 0.5rem 1rem 0px rgba(0, 0, 0, 0.5);
 }
 
-footer {
-	width: 600px;
-	margin: 0 auto;
-	margin-top: 1rem;
+.gallery__item:hover .gallery__image {
+  filter: grayscale(0);
+  transform: scale(1.25);
 }
 
-.galeria {
-	height: 400px;
-	width: 600px;
-	margin: 0 auto;
-	border: 1px solid #555;
-	position: relative;
-	overflow: hidden;
-}
-
-.galeria img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.5s;
-}
-
-.galeria input[type="radio"] {
-	position: relative;
-	top: 370px;
-	left: 50%;
-	transform: translateX(-200%);
-	z-index: 100;
-}
-
-.galeria input[type="radio"]:nth-child(1) {
-	left: 50;
-}
-
-input[type="radio"]:nth-of-type(1):checked ~ img:nth-of-type(1) {
-	opacity: 1;
-}
-input[type="radio"]:nth-of-type(2):checked ~ img:nth-of-type(2) {
-	opacity: 1;
-}
-input[type="radio"]:nth-of-type(3):checked ~ img:nth-of-type(3) {
-	opacity: 1;
-}
-input[type="radio"]:nth-of-type(4):checked ~ img:nth-of-type(4) {
-	opacity: 1;
+.gallery__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(0.75);
+  transition: all 0.3s ease-in-out;
 }
