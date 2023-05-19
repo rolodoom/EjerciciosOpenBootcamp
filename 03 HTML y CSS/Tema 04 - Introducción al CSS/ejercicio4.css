@@ -1,23 +1,16 @@
 * {
-	font-family: "Roboto Serif", serif;
-	color: gray;
+  font-family: "Roboto", sans-serif;
+  color: gray;
 }
 
-header {
-	padding: 3rem 1rem;
-}
-header h1 {
-	text-align: center;
-	color: #555;
+body {
+  padding: 3rem;
 }
 
-main article {
-	font-size: 1.25rem;
+li:first-child {
+  color: red;
 }
 
-main article p.miparrafo {
-	font-size: 1rem;
-	font-style: italic;
-	padding: 1rem 1rem 1rem 5rem;
-	color: lightcoral;
+ul #elemento-1 {
+  font-size: 2em;
 }
