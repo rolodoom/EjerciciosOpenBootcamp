@@ -1,104 +1,218 @@
-/*
- _______   _______
-|  _____| |  ___  |
-| |       | |   | |    Rolando Ramos Torres (@rolodoom)
-| |       | |___| |    https://github.com/rolodoom
-|_|       |_______|
- _         _______  
-| |       |  ___  |    Curso: HTML y CSS
-| |       | |   | |    Sesion 07 - Creación de estilos para formularios
-| |_____  | |___| |    Ejercicio 7 - Fichero CSS
-|_______| |_______|
+:root {
+  --color-bg: #161717;
+  --color-text: #fff;
+  --color-input-bg: #212121;
+  --color-input-bg-hover: #454045;
+  --color-accent: #ea4c89;
+  --color-accent-alpha50: rgba(234, 76, 137, 0.5);
+}
 
-*/
-html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	font-size: 0.875em;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
-body {
-	background-image: url(https://picsum.photos/id/10/1920/1080.webp);
-	background-size: cover;
-	background-position: center center;
-	font-family: "Roboto", sans-serif;
-	color: #353737;
+a:link,
+a:visited {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover,
+a:active,
+a:focus {
+  opacity: 0.6;
 }
 
-h1 {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 500;
-	text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 44rem;
+  margin: 4rem auto;
 }
 
-.contenedor {
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	justify-content: center;
+.register {
+  align-self: flex-start;
 }
 
-.login-form {
-	background-color: rgba(255, 255, 255, 0.75);
-	max-width: 400px;
-	padding: 3em;
-	border-radius: 1em;
-	margin: 2em;
+.register h1 {
+  margin-bottom: 3.2rem;
+  font-size: 2.4rem;
 }
 
-.login-form__field {
-	margin-bottom: 1em;
+.register .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.login-form__field--usuario,
-.login-form__field--password {
-	width: 240px;
-	max-width: 100%;
-	border: 1px solid #aaa;
-	border-radius: 0.5em;
-	font-size: 1.15em;
-	padding: 0.5em;
+.btn {
+  cursor: pointer;
+  border: none;
+  /* transition: all 0.3s ease-in-out; */
+}
+.btn--google {
+  background-color: #1b73e8;
+  border-radius: 0.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+}
+.btn--google:hover {
+  opacity: 0.6;
+}
+.btn--google picture {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: block;
+  border-radius: 0.2rem;
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.btn--google picture img {
+  width: 75%;
+}
+.btn--google span {
+  color: white;
+  padding: 1.5rem;
+  font-weight: 500;
 }
 
-.login-form__field--checkbox {
-	height: 1.5em;
-	width: 1.5em;
+.btn--twitter {
+  background: #eee;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.login-form__field--usuario,
-.login-form__field--password {
-	background: transparent;
-	background-repeat: no-repeat;
-	background-position: 0.15em;
-	padding-left: 2.25em;
+.btn--twitter picture {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.login-form__field--usuario {
-	background-image: url(icons/outline_account_circle_black_24dp.svg);
+.btn--twitter picture img {
+  width: 100%;
 }
-.login-form__field--password {
-	background-image: url(icons/outline_vpn_key_black_24dp.svg);
+.btn--twitter:hover {
+  background: #ddd;
 }
 
-.login-form__field [for="check"] {
-	font-size: 1em;
-	position: relative;
-	top: -0.3em;
-	margin-left: 0.5em;
+.btn--submit {
+  padding: 1rem;
+  background-color: var(--color-accent);
+  display: block;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+}
+.btn--submit:hover {
+  opacity: 0.6;
 }
 
-.login-form__button button {
-	background-color: #1f90a8;
-	border: 0;
-	padding: 0.4em 1.5em;
-	margin-top: 1.25em;
-	font-size: 1.25em;
-	font-family: "Roboto", sans-serif;
-	color: #fff;
-	cursor: pointer;
+.separator {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem auto;
 }
-.login-form__button button:hover {
-	background-color: #718072;
+.separator hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.separator span {
+  color: #8b8b8b;
+  text-transform: capitalize;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.4rem;
+}
+
+.section-inputs {
+  display: flex;
+  gap: 1.6rem;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label span {
+  font-weight: 700;
+}
+
+label input[type="text"],
+label input[type="email"],
+label input[type="password"] {
+  width: 100%;
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+label input[type="text"]:hover,
+label input[type="email"]:hover,
+label input[type="password"]:hover {
+  box-shadow: 0 0 0.8rem var(--color-accent-alpha50);
+  border: 1px solid #ccc;
+  background-color: var(--color-input-bg-hover);
+}
+label input[type="text"]:focus,
+label input[type="email"]:focus,
+label input[type="password"]:focus {
+  box-shadow: 0 0 0.8rem var(--color-accent-alpha50);
+  background-color: var(--color-input-bg-hover);
+  border: 1px solid var(--color-accent-alpha50);
+}
+
+label.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+label.checkbox span {
+  font-weight: 400;
+  font-size: 1.4rem;
 }
